@@ -7,8 +7,6 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
 const saltRounds = 10;
 
-
-
 const app = express();
 
 app.use(express.static("public"));
