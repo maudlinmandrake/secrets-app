@@ -8,6 +8,7 @@ const session = require("express-session");
 const passport = require("passport");
 const passportLocalMongoose = require("passport-local-mongoose");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
+const findOrCreate = require("mongoose-findorcreate");
 
 const app = express();
 
@@ -34,7 +35,7 @@ const userSchema = new mongoose.Schema({
 
 //this will salt and hash our user info for us; replaces bcrypt
 userSchema.plugin(passportLocalMongoose);
-
+userSchema.plugin(findOrCreate);
 const User = new mongoose.model("User", userSchema);
 
 passport.use(User.createStrategy());
