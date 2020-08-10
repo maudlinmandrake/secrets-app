@@ -30,7 +30,8 @@ mongoose.set("useCreateIndex", true);
 
 const userSchema = new mongoose.Schema({
     email: String,
-    password: String
+    password: String,
+    googleId: String
 });
 
 //this will salt and hash our user info for us; replaces bcrypt
