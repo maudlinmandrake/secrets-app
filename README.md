@@ -1,0 +1,3 @@
+# secrets-app
+
+The Secrets App is a little app that lets you anonymously share secrets on the Internet. The point of this app is ultimately to learn about the different levels of authentication and security: creating and saving user emails and passwords, encrypting passwords and keeping encryption keys safe with dotenv (and why it's important to set things up like dotenv immediately: as you can see, due to version control, you can view the encryption key for this particular app in the version history, as I was building this app step-by-step while working through my web dev bootcamp course, and using a .env file came later!).
